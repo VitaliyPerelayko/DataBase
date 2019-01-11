@@ -18,8 +18,8 @@ where
 
 
 
-select distinct paydate as Date,
-       (select max(value) from expenses) as Payment
+select paydate as Date,
+       max(value) as Payment
 from
      expenses
 where
